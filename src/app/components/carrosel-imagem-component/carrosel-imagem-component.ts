@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-carrosel-component',
+  selector: 'app-carrosel-imagem-component',
   standalone: true,
-  imports: [CarouselModule, MatIconModule],
-  templateUrl: './carrosel-component.html',
-  styleUrl: './carrosel-component.scss'
+  imports: [CarouselModule],
+  templateUrl: './carrosel-imagem-component.html',
+  styleUrl: './carrosel-imagem-component.scss'
 })
-export class CarroselComponent {
+export class CarroselImagemComponent {
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
