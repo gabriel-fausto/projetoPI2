@@ -1,0 +1,26 @@
+<div class="content-container">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+    </mat-drawer>
+    <div class="sidenav-content">
+      <div class="content-toolbar">
+        <button type="button" matButton (click)="drawer.toggle()">
+          Filtros
+        </button>
+        <span class="spacer"></span>
+        <mat-form-field>
+          <mat-label>Ordernar por</mat-label>
+          <mat-select [(value)]="ordenacaoSelecionada">
+            <mat-option></mat-option>
+            @for (option of ordenacao; track option) {
+            <mat-option [value]="option.value">{{ option.viewValue }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <app-grid-roupas-component></app-grid-roupas-component>
+    </div>
+
+  </mat-drawer-container>
+</div>

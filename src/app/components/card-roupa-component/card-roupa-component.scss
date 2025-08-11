@@ -1,0 +1,32 @@
+.card-roupa {
+  max-width: 250px;
+  background-color: var(--mat-sys-surface-variant);
+  color: var(--mat-sys-on-surface-variant);
+}
+
+img {
+  object-fit: cover;
+  height: 300px;
+}
+
+h3 {
+  color: var(--mat-sys-on-error-container);
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-card-content h3 {
+  margin: 0;
+}
+
+mat-card-content {
+  padding: 0 16px;
+}
+
+mat-card-content:last-child {
+  padding-bottom: 8px;
+}

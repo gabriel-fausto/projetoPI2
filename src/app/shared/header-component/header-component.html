@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <mat-toolbar-row class="toolbar-primaria">
+    <div class="logo-container">
+      <span>Vivarias</span>
+    </div>
+    <span class="spacer"></span>
+    <button matIconButton>
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button matIconButton>
+      <mat-icon>shopping_basket</mat-icon>
+    </button>
+    <button matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <p mat-menu-item>
+        <mat-slide-toggle (change)="onThemeChange($event)"></mat-slide-toggle>
+        <mat-icon>dark_mode</mat-icon>
+      </p>
+    </mat-menu>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="toolbar-secundaria">
+    <button mat-button>Camisas</button>
+    <button mat-button>Calças</button>
+    <button mat-button>Sapatos</button>
+    <button mat-button>Acessórios</button>
+  </mat-toolbar-row>
+</mat-toolbar>
