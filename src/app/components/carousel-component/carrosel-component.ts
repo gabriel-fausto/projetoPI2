@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-carrosel-component',
   standalone: true,
-  imports: [CarouselModule],
+  imports: [CarouselModule, MatIconModule],
   templateUrl: './carrosel-component.html',
   styleUrl: './carrosel-component.scss'
 })
@@ -21,7 +22,6 @@ export class CarroselComponent {
     autoplay: true,
     autoplaySpeed: 1500,
     autoplayTimeout: 10000,
-    navText: ['', ''],
     responsive: {
       0: {
         items: 1
@@ -36,6 +36,7 @@ export class CarroselComponent {
         items: 1
       }
     },
+    navText: ['<span><</span>', '<span>></span>'],
     nav: true
   }
 }

@@ -46,3 +46,45 @@ body {
     padding: 108px 0 0 0;
   }
 }
+
+// botões dos slides de todo o site, pois são usados em vários componentes
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  margin: 0 !important;
+}
+
+.owl-prev,
+.owl-next {
+  pointer-events: auto;
+  background: rgba(3, 3, 3, 0) !important;
+  border-radius: 50% !important;
+  border: none;
+  color: var(--mat-sys-on-surface) !important;
+  border-radius: 50%;
+  font-size: 50px !important;
+  padding: 0 !important;
+  width: 32px;
+  height: 32px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.owl-prev {
+  left: 10px;
+}
+
+.owl-next {
+  right: 10px;
+}
