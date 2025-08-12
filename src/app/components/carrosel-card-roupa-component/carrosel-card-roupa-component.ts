@@ -32,6 +32,9 @@ export class CarroselCardRoupaComponent {
       },
       940: {
         items: 4
+      },
+      1080: {
+        items: 5
       }
     }
   }
