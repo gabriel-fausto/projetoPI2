@@ -24,16 +24,16 @@ export class CarroselCardRoupaComponent {
       0: {
         items: 1
       },
-      400: {
+      550: {
         items: 2
       },
-      740: {
+      800: {
         items: 3
       },
-      940: {
+      1050: {
         items: 4
       },
-      1080: {
+      1300: {
         items: 5
       }
     }

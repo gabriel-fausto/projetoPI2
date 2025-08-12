@@ -1,0 +1,35 @@
+<div class="content-container">
+  <form class="form" action="">
+    <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      placeholder="exemplo@exemplo.com"
+      [formControl]="email"
+      (blur)="updateErrorMessage()"
+      required
+    />
+    @if (email.invalid) {
+      <mat-error>{{errorMessage()}}</mat-error>
+    }
+  </mat-form-field>
+
+    <mat-form-field id="input-senha" name="input-senha" type="password" placeholder="Digite sua senha">
+      <mat-label>Senha</mat-label>
+      <input matInput [type]="hide() ? 'password' : 'text'" 
+      [formControl]="senha"
+      (blur)="updateErrorMessage()"/>
+      <button
+      matIconButton
+      matSuffix
+      (click)="hideSenha = !hideSenha"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()"
+    >
+      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    </mat-form-field>
+
+    <button matFab extended [disabled]="email.invalid || senha.invalid" (click)="onBotaoClicado()">Confirmar</button>
+  </form>
+</div>
