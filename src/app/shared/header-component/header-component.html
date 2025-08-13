@@ -10,10 +10,14 @@
     <button matIconButton>
       <mat-icon>shopping_basket</mat-icon>
     </button>
-    <button matIconButton>
+    <button matIconButton [matMenuTriggerFor]="loginMenu">
       <mat-icon>account_circle</mat-icon>
     </button>
-    <a class="login-link" href="">Login</a>
+    <mat-menu #loginMenu="matMenu">
+      <div matMenuContent (click)="$event.stopPropagation()">
+        <app-login-component></app-login-component>
+      </div>
+    </mat-menu>
     <button matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <mat-icon>more_vert</mat-icon>
     </button>

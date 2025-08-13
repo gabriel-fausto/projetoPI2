@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatMenu } from '@angular/material/menu';
 import { MatMenuModule } from '@angular/material/menu';
+import { LoginComponent } from '../../pages/login-component/login-component';
 
 import {
   MatSlideToggleChange,
@@ -13,7 +14,7 @@ import {
 
 @Component({
   selector: 'app-header-component',
-  imports: [MatButtonModule, MatToolbarModule, MatIcon, MatSlideToggleModule, MatMenu, MatMenuModule],
+  imports: [MatButtonModule, MatToolbarModule, MatIcon, MatSlideToggleModule, MatMenu, MatMenuModule, LoginComponent],
   templateUrl: './header-component.html',
   styleUrl: './header-component.scss'
 })

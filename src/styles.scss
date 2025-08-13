@@ -10,8 +10,10 @@
 
 html {
   @include mat.theme((color: (theme-type: light,
-        primary: theme-colors.$primary-palette,
-        tertiary: theme-colors.$tertiary-palette,
+         primary: theme-colors.$primary-palette,
+         tertiary: theme-colors.$tertiary-palette,
+          //primary: mat.$brown-palette,
+          //tertiary: mat.$brown-palette,
       ),
       typography: Roboto,
       density: 0,
