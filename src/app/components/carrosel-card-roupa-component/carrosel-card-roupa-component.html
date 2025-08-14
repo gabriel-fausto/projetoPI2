@@ -1,26 +1,25 @@
 <div class="content-container">
-    <div class="carrosel">
-        <h1 class="titulo">Roupas em destaque</h1>
-        <owl-carousel-o [options]="customOptions">
-            <ng-template carouselSlide>
-                <app-card-roupa-component></app-card-roupa-component>
-            </ng-template>
-            <ng-template carouselSlide>
-                <app-card-roupa-component></app-card-roupa-component>
-            </ng-template>
-            <ng-template carouselSlide>
-                <app-card-roupa-component></app-card-roupa-component>
-            </ng-template>
-            <ng-template carouselSlide>
-                <app-card-roupa-component></app-card-roupa-component>
-            </ng-template>
-            <ng-template carouselSlide>
-                <app-card-roupa-component></app-card-roupa-component>
-            </ng-template>
-            <ng-template carouselSlide>
-                <app-card-roupa-component></app-card-roupa-component>
-            </ng-template>
-        </owl-carousel-o>
-
-    </div>
+    <app-carrossel-component>
+        <app-card-carrossel-component #itemCarrosel>
+            <app-card-roupa-component></app-card-roupa-component>
+        </app-card-carrossel-component>
+        <app-card-carrossel-component #itemCarrosel>
+            <app-card-roupa-component></app-card-roupa-component>
+        </app-card-carrossel-component>
+        <app-card-carrossel-component #itemCarrosel>
+            <app-card-roupa-component></app-card-roupa-component>
+        </app-card-carrossel-component>
+        <app-card-carrossel-component #itemCarrosel>
+            <app-card-roupa-component></app-card-roupa-component>
+        </app-card-carrossel-component>
+        <app-card-carrossel-component #itemCarrosel>
+            <app-card-roupa-component></app-card-roupa-component>
+        </app-card-carrossel-component>
+        <app-card-carrossel-component #itemCarrosel>
+            <app-card-roupa-component></app-card-roupa-component>
+        </app-card-carrossel-component>
+        <app-card-carrossel-component #itemCarrosel>
+            <app-card-roupa-component></app-card-roupa-component>
+        </app-card-carrossel-component>
+    </app-carrossel-component>
 </div>
