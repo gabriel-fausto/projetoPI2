@@ -1,4 +1,4 @@
-import { Component, ContentChildren, AfterContentInit, QueryList } from '@angular/core';
+import { Component, ContentChildren, AfterContentInit, QueryList, Input } from '@angular/core';
 import { ItemCarrosel } from '../item-carrossel';
 
 @Component({
@@ -9,6 +9,7 @@ import { ItemCarrosel } from '../item-carrossel';
 })
 export class CarrosselComponent implements AfterContentInit {
   @ContentChildren('itemCarrosel') conteudo!: QueryList<ItemCarrosel>;
+  @Input() carrosselID: string = '';
 
   idsCarrosel: string[] = [];
   idAtual = 0;
@@ -20,7 +21,7 @@ export class CarrosselComponent implements AfterContentInit {
     // Aqui você pode acessar o conteúdo projetado
     let auxiliar = 1;
     this.conteudo.forEach(divCard => {
-      const idCard = 'card-' + auxiliar;
+      const idCard = this.carrosselID + auxiliar;
       divCard.setId(idCard);
       this.idsCarrosel.push(idCard);
       auxiliar++;
@@ -38,8 +39,8 @@ export class CarrosselComponent implements AfterContentInit {
     } else {
       this.idAtual = this.calculaCardAnterior();
     }
-
-    const container = document.getElementById("id-car");
+    
+    const container = document.getElementById(this.carrosselID);
     const targetElement = document.getElementById(this.idsCarrosel[this.idAtual]);
     if (container && targetElement) {
       // Calcula a posição do target em relação ao container
@@ -57,7 +58,7 @@ export class CarrosselComponent implements AfterContentInit {
     let achouCardEmTela = false;
     let achouCardAposATela = false;
     let index = 0;
-    let rectContainer = document.getElementById("id-car")!.getBoundingClientRect();
+    let rectContainer = document.getElementById(this.carrosselID)!.getBoundingClientRect();
 
     do {
       const targetElement = document.getElementById(this.idsCarrosel[index]);
@@ -87,7 +88,7 @@ export class CarrosselComponent implements AfterContentInit {
     let achouCardEmTela = false;
     let achouCardAntesDaTela = false;
     let index = this.idsCarrosel.length - 1;
-    let rectContainer = document.getElementById("id-car")!.getBoundingClientRect();
+    let rectContainer = document.getElementById(this.carrosselID)!.getBoundingClientRect();
 
     do {
       const targetElement = document.getElementById(this.idsCarrosel[index]);

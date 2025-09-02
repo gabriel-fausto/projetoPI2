@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardRoupaComponent } from "../card-roupa-component/card-roupa-component";
 import { CarrosselComponent } from "../../shared/carrossel/carrossel-component/carrossel-component";
 import { CardCarrosselComponent } from '../../shared/carrossel/card-carrossel-component/card-carrossel-component';
@@ -10,4 +10,5 @@ import { CardCarrosselComponent } from '../../shared/carrossel/card-carrossel-co
   styleUrl: './carrosel-card-roupa-component.scss'
 })
 export class CarroselCardRoupaComponent {
+  @Input() identificador: string = '';
 }
